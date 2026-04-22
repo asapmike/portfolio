@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Research Project – Teacher Emotion and Student Outcomes (PISA 2022)",
+        "year": 2026,
+        "image": "images/projects/teacher emotion.png",
+        "description": "Used the PISA 2022 dataset to study how teacher emotion relates to student academic performance and other standardized indicators. Applied Hierarchical Linear Modeling (HLM) to analyze relationships between teacher-level and student-level variables."
+    },
+    {
+        "title": "Mathematical Contest in Modeling (MCM/ICM), Problem C",
+        "year": 2026,
+        "image": "images/projects/mcm2026c.jpg",
+        "description": "Participated in the 2026 MCM/ICM, working on Problem C. Used Bayesian and machine learning methods to build models and analyze the problem, contributing to model development, data analysis, and technical report writing."
+    },
+    {
+        "title": "Relationship Visualization of Price Per Calorie and Processing Level of Food Products",
+        "year": 2026,
+        "image": "images/projects/ppc vs nova class.png",
+        "description": "More processed foods generally cost less per calorie, especially at Walmart and Target where the decline across NOVA classes is clear. WholeFoods shows a weaker and less consistent version of this trend."
+    },
+    {
+        "title": "Reiciendis aut sed aliquid.",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Unde soluta facilis voluptate optio. Cupiditate magni saepe laborum veniam deserunt quia, asperiores,\n                unde, commodi sed nisi repellat molestias deleniti ex quo! Voluptatem officiis autem non hic eveniet\n                ipsum et!"
+    },
+    {
+        "title": "Explicabo officiis rem consectetur.",
+        "year": 2023,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Ea minus numquam odio debitis tempore impedit assumenda natus est soluta laudantium voluptatum suscipit\n                ut quam, sequi quaerat. Est, quo laboriosam repellat temporibus odit blanditiis culpa quas at? Quae, ea.\n            "
+    },
+    {
+        "title": "Perspiciatis corporis veniam eius.",
+        "year": 2026,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Culpa repellendus dignissimos vitae animi delectus aperiam earum rerum adipisci beatae, laudantium ipsa\n                esse, similique excepturi sint cumque dolorum ea rem voluptates, eos autem error velit aspernatur harum\n                ducimus! Dolorum."
+    },
+    {
+        "title": "Odit sequi modi earum.",
+        "year": 2022,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Aut, praesentium dolores blanditiis, hic rerum harum expedita debitis voluptas repellat asperiores\n                nesciunt eligendi, sequi odio animi! Inventore molestiae voluptates mollitia, modi, at magnam neque\n                labore porro doloribus, quisquam quia?"
+    },
+    {
+        "title": "Enim necessitatibus amet quis.",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Incidunt ipsam, nemo voluptatem quaerat, dolores tempore corrupti aliquam culpa distinctio libero eos\n                labore atque error quam, sequi rerum quasi nam? Architecto odio, officia culpa incidunt laborum eveniet!\n                Libero, quae."
+    },
+    {
+        "title": "Sunt rerum perferendis praesentium.",
+        "year": 2023,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Voluptatibus amet repellat consequatur harum ad, iure tenetur omnis quibusdam alias cupiditate, atque\n                assumenda enim et consequuntur ea itaque quis, vitae fugit numquam obcaecati repudiandae! Facilis omnis\n                suscipit eaque rerum."
+    },
+    {
+        "title": "Natus aliquam explicabo reprehenderit?",
+        "year": 2021,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Beatae amet provident vel quod dolorem? Itaque perspiciatis fugit eius! Quaerat, distinctio iusto\n                molestias iste sunt minima accusantium nemo impedit eligendi blanditiis! Rem quidem, quia debitis earum\n                dolore quo natus!"
+    },
+    {
+        "title": "Maiores, ex! Quibusdam, debitis!",
+        "year": 2022,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Modi atque doloribus, consectetur voluptatibus distinctio nobis praesentium! Vitae provident, nemo a\n                eveniet illo quisquam quia, enim voluptate sed id cum facilis recusandae consectetur sequi sint corrupti\n                asperiores culpa ex?"
+    },
+    {
+        "title": "Consequuntur corporis quasi quia.",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "A cumque quod molestiae nemo hic nobis dolore. Hic maxime nihil quos accusantium soluta, incidunt\n                repellat ipsum ab cupiditate, beatae debitis aliquam blanditiis mollitia harum. Nostrum accusamus\n                pariatur repudiandae. Maxime."
+    }
+]

@@ -165,6 +165,23 @@ form button:active {
     box-shadow: 0 8px 18px oklch(20% 0 0 / 0.12);
 }
 
+#profile-stats dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.25rem 0.75rem;
+    margin: 0;
+}
+
+#profile-stats dt {
+    grid-row: 1;
+    font-weight: 650;
+}
+
+#profile-stats dd {
+    grid-row: 2;
+    margin: 0;
+}
+
 h1,
 h2,
 h3,
