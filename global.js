@@ -35,6 +35,32 @@ export async function fetchGithubData(username) {
     }
 }
 
+export async function fetchGithubRepoStarsTotal(username) {
+    let totalStars = 0;
+    let page = 1;
+
+    while (true) {
+        const url = `https://api.github.com/users/${username}/repos?per_page=100&page=${page}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch GitHub repos: ${response.statusText}`);
+        }
+
+        const repos = await response.json();
+        for (const repo of repos) {
+            totalStars += repo.stargazers_count ?? 0;
+        }
+
+        if (repos.length < 100) {
+            break;
+        }
+
+        page += 1;
+    }
+
+    return totalStars;
+}
+
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
     if (!(containerElement instanceof Element)) {
         throw new Error('renderProjects: containerElement must be a DOM Element');
@@ -87,38 +113,6 @@ const BASE_PATH =
 
 let nav = document.createElement('nav');
 document.body.prepend(nav);
-// Step 4.2: Add HTML for the dark mode switch
-document.body.insertAdjacentHTML(
-    'afterbegin',
-    `
-        <label class="color-scheme">
-            Theme:
-            <select>
-                <option value="light dark" selected>Automatic</option>
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-            </select>
-        </label>
-    `,
-);
-
-// Step 4.4: Actually making it work
-let select = document.querySelector('.color-scheme select');
-
-function setColorScheme(colorScheme) {
-    select.value = colorScheme;
-    document.documentElement.style.setProperty('color-scheme', colorScheme);
-    localStorage.colorScheme = colorScheme;
-}
-
-if ('colorScheme' in localStorage) {
-    setColorScheme(localStorage.colorScheme);
-}
-
-select.addEventListener('input', function (event) {
-    console.log('color scheme changed to', event.target.value);
-    setColorScheme(event.target.value);
-});
 
 // Step 5 (Optional): Better contact form (mailto with percent-encoding)
 let form = document.querySelector('form');
@@ -160,6 +154,40 @@ for (let p of pages) {
 
     nav.append(a);
 }
+
+// Step 4.2: Add HTML for the dark mode switch
+// Put it inside the nav so it won't overlap on small screens.
+nav.insertAdjacentHTML(
+    'beforeend',
+    `
+        <label class="color-scheme">
+            Theme:
+            <select>
+                <option value="light dark" selected>Automatic</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </label>
+    `,
+);
+
+// Step 4.4: Actually making it work
+let select = nav.querySelector('.color-scheme select');
+
+function setColorScheme(colorScheme) {
+    select.value = colorScheme;
+    document.documentElement.style.setProperty('color-scheme', colorScheme);
+    localStorage.colorScheme = colorScheme;
+}
+
+if ('colorScheme' in localStorage) {
+    setColorScheme(localStorage.colorScheme);
+}
+
+select.addEventListener('input', function (event) {
+    console.log('color scheme changed to', event.target.value);
+    setColorScheme(event.target.value);
+});
 
 export async function fetchGitHubData(username) {
     // return statement here

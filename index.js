@@ -1,4 +1,9 @@
-import { fetchJSON, renderProjects, fetchGithubData } from './global.js';
+import {
+    fetchJSON,
+    renderProjects,
+    fetchGithubData,
+    fetchGithubRepoStarsTotal,
+} from './global.js';
 const projects = await fetchJSON('./lib/projects.json');
 const latestProjects = projects.slice(0, 3);
 const projectsContainer = document.querySelector('.projects');
@@ -18,4 +23,11 @@ if (profileStats) {
         <dd>${githubData.followers}</dd>
         <dd>${githubData.following}</dd>
     `;
+}
+
+const totalStars = await fetchGithubRepoStarsTotal('asapmike');
+const totalStarsElement = document.querySelector('#total-stars');
+
+if (totalStarsElement) {
+    totalStarsElement.textContent = `Total Stars: ${totalStars}`;
 }

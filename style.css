@@ -50,9 +50,10 @@ nav a:hover {
 }
 
 .color-scheme {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-size: 80%;
     z-index: 1;
 }
