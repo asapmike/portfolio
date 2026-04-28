@@ -76,22 +76,44 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
                 ? '/'
                 : '/portfolio/';
 
-        const isAbsoluteUrl =
-            /^https?:\/\//i.test(p.image) ||
-            p.image.startsWith('data:') ||
-            p.image.startsWith('/');
+        const resolvePath = (path) => {
+            const value = String(path);
+            const isAbsoluteUrl =
+                /^https?:\/\//i.test(value) ||
+                value.startsWith('data:') ||
+                value.startsWith('/');
 
-        const imageSrc = isAbsoluteUrl
-            ? p.image
-            : basePath + String(p.image).replace(/^\.\/?/, '');
+            return isAbsoluteUrl ? value : basePath + value.replace(/^\.\/?/, '');
+        };
 
+        const imageSrc = resolvePath(p.image);
         const article = document.createElement('article');
-
         article.innerHTML = `
             <${headingLevel}>${p.title}</${headingLevel}>
             <img src="${imageSrc}" alt="${p.title}">
             <p>${p.description}</p>
         `;
+
+        if (p.url) {
+            article.classList.add('project-link');
+            article.tabIndex = 0;
+            article.setAttribute('role', 'link');
+            article.setAttribute('aria-label', `Open project: ${p.title}`);
+
+            const targetUrl = resolvePath(p.url);
+            const openProject = () => {
+                window.open(targetUrl, '_blank', 'noopener,noreferrer');
+            };
+            article.addEventListener('click', () => {
+                openProject();
+            });
+            article.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openProject();
+                }
+            });
+        }
 
         containerElement.appendChild(article);
     }

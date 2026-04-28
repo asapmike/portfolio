@@ -1,74 +1,78 @@
 [
     {
-        "title": "Research Project – Teacher Emotion and Student Outcomes (PISA 2022)",
+        "title": "UCSD DSC 106 Project 1: Relationship Visualization of Price Per Calorie and Processing Level of Food Products",
+        "year": 2026,
+        "image": "images/projects/ppc vs nova class.png",
+        "description": "More processed foods generally cost less per calorie, especially at Walmart and Target where the decline across NOVA classes is clear. WholeFoods shows a weaker and less consistent version of this trend.",
+        "url": "projects/dsc106 proj1/dsc106_proj1.pdf"
+    },
+    {
+        "title": "UCSD DSC 106 Project 2: Persuasive or Deceptive Visualization? NYPD Complaint Analysis",
+        "year": 2026,
+        "image": "projects/dsc106 proj2/assets/for_rank_gap.png",
+        "description": "Analyzed NYPD CCRB complaint data to show how the same evidence can support different narratives. Compared a persuasive view and a more cautious uncertainty-aware view to examine how visual design choices shape interpretation.",
+        "url": "projects/dsc106 proj2/index.html"
+    },
+    {
+        "title": "NTU Research Project: Teacher Emotion and Student Outcomes (PISA 2022)",
         "year": 2026,
         "image": "images/projects/teacher emotion.png",
-        "description": "Used the PISA 2022 dataset to study how teacher emotion relates to student academic performance and other standardized indicators. Applied Hierarchical Linear Modeling (HLM) to analyze relationships between teacher-level and student-level variables."
+        "description": "Used the PISA 2022 dataset to study how teacher emotion relates to student academic performance and other standardized indicators. Applied Hierarchical Linear Modeling (HLM) to analyze relationships between teacher-level and student-level variables.",
+        "url": "projects/NTU Teacher Emotion/teacher emotion copy.png"
     },
     {
         "title": "Mathematical Contest in Modeling (MCM/ICM), Problem C",
         "year": 2026,
         "image": "images/projects/mcm2026c.jpg",
-        "description": "Participated in the 2026 MCM/ICM, working on Problem C. Used Bayesian and machine learning methods to build models and analyze the problem, contributing to model development, data analysis, and technical report writing."
+        "description": "Participated in the 2026 MCM/ICM, working on Problem C. Used Bayesian and machine learning methods to build models and analyze the problem, contributing to model development, data analysis, and technical report writing.",
+        "url": "projects/mcm 2026 c/MCM_ICM_2026(1).pdf"
     },
     {
-        "title": "Relationship Visualization of Price Per Calorie and Processing Level of Food Products",
-        "year": 2026,
-        "image": "images/projects/ppc vs nova class.png",
-        "description": "More processed foods generally cost less per calorie, especially at Walmart and Target where the decline across NOVA classes is clear. WholeFoods shows a weaker and less consistent version of this trend."
-    },
-    {
-        "title": "Reiciendis aut sed aliquid.",
-        "year": 2024,
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Unde soluta facilis voluptate optio. Cupiditate magni saepe laborum veniam deserunt quia, asperiores,\n                unde, commodi sed nisi repellat molestias deleniti ex quo! Voluptatem officiis autem non hic eveniet\n                ipsum et!"
-    },
-    {
-        "title": "Explicabo officiis rem consectetur.",
+        "title": "Coming soon...",
         "year": 2023,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ea minus numquam odio debitis tempore impedit assumenda natus est soluta laudantium voluptatum suscipit\n                ut quam, sequi quaerat. Est, quo laboriosam repellat temporibus odit blanditiis culpa quas at? Quae, ea.\n            "
+        "description": "Coming soon..."
     },
     {
-        "title": "Perspiciatis corporis veniam eius.",
+        "title": "Coming soon...",
         "year": 2026,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Culpa repellendus dignissimos vitae animi delectus aperiam earum rerum adipisci beatae, laudantium ipsa\n                esse, similique excepturi sint cumque dolorum ea rem voluptates, eos autem error velit aspernatur harum\n                ducimus! Dolorum."
+        "description": "Coming soon..."
     },
     {
-        "title": "Odit sequi modi earum.",
+        "title": "Coming soon...",
         "year": 2022,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Aut, praesentium dolores blanditiis, hic rerum harum expedita debitis voluptas repellat asperiores\n                nesciunt eligendi, sequi odio animi! Inventore molestiae voluptates mollitia, modi, at magnam neque\n                labore porro doloribus, quisquam quia?"
+        "description": "Coming soon..."
     },
     {
-        "title": "Enim necessitatibus amet quis.",
+        "title": "Coming soon...",
         "year": 2025,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Incidunt ipsam, nemo voluptatem quaerat, dolores tempore corrupti aliquam culpa distinctio libero eos\n                labore atque error quam, sequi rerum quasi nam? Architecto odio, officia culpa incidunt laborum eveniet!\n                Libero, quae."
+        "description": "Coming soon..."
     },
     {
-        "title": "Sunt rerum perferendis praesentium.",
+        "title": "Coming soon...",
         "year": 2023,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Voluptatibus amet repellat consequatur harum ad, iure tenetur omnis quibusdam alias cupiditate, atque\n                assumenda enim et consequuntur ea itaque quis, vitae fugit numquam obcaecati repudiandae! Facilis omnis\n                suscipit eaque rerum."
+        "description": "Coming soon..."
     },
     {
-        "title": "Natus aliquam explicabo reprehenderit?",
+        "title": "Coming soon...",
         "year": 2021,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Beatae amet provident vel quod dolorem? Itaque perspiciatis fugit eius! Quaerat, distinctio iusto\n                molestias iste sunt minima accusantium nemo impedit eligendi blanditiis! Rem quidem, quia debitis earum\n                dolore quo natus!"
+        "description": "Coming soon..."
     },
     {
-        "title": "Maiores, ex! Quibusdam, debitis!",
+        "title": "Coming soon...",
         "year": 2022,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Modi atque doloribus, consectetur voluptatibus distinctio nobis praesentium! Vitae provident, nemo a\n                eveniet illo quisquam quia, enim voluptate sed id cum facilis recusandae consectetur sequi sint corrupti\n                asperiores culpa ex?"
+        "description": "Coming soon..."
     },
     {
-        "title": "Consequuntur corporis quasi quia.",
+        "title": "Coming soon...",
         "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "A cumque quod molestiae nemo hic nobis dolore. Hic maxime nihil quos accusantium soluta, incidunt\n                repellat ipsum ab cupiditate, beatae debitis aliquam blanditiis mollitia harum. Nostrum accusamus\n                pariatur repudiandae. Maxime."
+        "description": "Coming soon..."
     }
 ]

@@ -166,6 +166,15 @@ form button:active {
     box-shadow: 0 8px 18px oklch(20% 0 0 / 0.12);
 }
 
+.projects article.project-link {
+    cursor: pointer;
+}
+
+.projects article.project-link:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
 #profile-stats dl {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

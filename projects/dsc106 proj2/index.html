@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Project 2 Report</title>
+    <style>
+        :root {
+            --color-neutral-95: hsl(220 10% 95%);
+            --color-neutral-90: hsl(220 10% 90%);
+            --color-neutral-80: hsl(220 10% 80%);
+            --color-neutral-70: hsl(220 10% 70%);
+            --color-neutral-60: hsl(220 10% 60%);
+            --color-neutral-50: hsl(220 10% 50%);
+            --color-neutral-40: hsl(220 10% 40%);
+            --color-neutral-30: hsl(220 10% 30%);
+            --color-neutral-20: hsl(220 10% 20%);
+            --color-neutral-10: hsl(220 10% 10%);
+        }
+
+        html {
+            font: 100%/1.5 system-ui;
+            counter-reset: figure;
+            background: var(--color-neutral-95);
+            max-width: min(75vw, 80em);
+            margin: 0 auto;
+        }
+
+        /* Headings */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: 1.1;
+            font-weight: 600;
+            text-wrap: balance;
+        }
+
+        h1,
+        h2 {
+            border-bottom: 1px solid var(--color-neutral-80);
+            padding-bottom: 0.2em;
+        }
+
+        h1 {
+            margin-block: 1em 0.5rem;
+            font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+            font-weight: 800;
+
+            small {
+                display: block;
+                width: fit-content;
+                padding: 0.2em 0.5em;
+                margin-inline: auto;
+                color: white;
+                background: var(--color-neutral-40);
+                font-size: 40%;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+        }
+
+        h2 {
+            font-size: 180%;
+            color: var(--color-neutral-30);
+        }
+
+        h3 {
+            font-size: 130%;
+        }
+
+        /* Lists */
+
+        ul,
+        ol {
+            padding-inline-start: 2em;
+        }
+
+        li {
+            &::marker {
+                color: var(--color-neutral-40);
+            }
+
+            +li {
+                margin-top: 0.2em;
+            }
+        }
+
+        /* Sectioning elements */
+
+        header {
+            padding-block: 1em;
+            text-align: center;
+        }
+
+        main {
+            background: white;
+            color: var(--color-neutral-20);
+            border-radius: 1rem;
+            padding: 0.1rem 2rem;
+        }
+
+        /* Figures */
+
+        figure {
+            margin: 1em 0;
+            padding: 0.5rem;
+            margin-inline: -0.5em;
+            border: 1px solid var(--color-neutral-80);
+            box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+            text-align: center;
+            background: white;
+
+            >figcaption {
+                font: 500 75% var(--font-sans);
+                background: var(--color-neutral-95);
+                padding: 0.5rem;
+                margin: -0.5rem;
+                margin-top: 0.5rem;
+                counter-increment: figure;
+                text-align: left;
+
+                &::before {
+                    content: "Figure " counter(figure) ": ";
+                    font-weight: bold;
+                    color: var(--color-neutral-40);
+                }
+
+                a:not(:hover, :focus, :active) {
+                    color: inherit;
+                    text-decoration: underline;
+                    text-decoration-color: color-mix(in lab,
+                            currentColor,
+                            transparent 70%);
+                }
+            }
+        }
+
+            figure img {
+                display: block;
+                width: min(100%, 54rem);
+                max-height: 40rem;
+                height: auto;
+                margin-inline: auto;
+                object-fit: contain;
+            }
+        </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <small>Project 2</small>
+            Persuasive or Deceptive Visualization?
+        </h1>
+
+        <p><strong>Zonglin Zhang</strong> (<em>zoz002@ucsd.edu</em>), <strong>La Li</strong>
+            (<em>ax010602@ucsd.edu</em>), <strong>Vincent Gao</strong> (<em>v2gao@ucsd.edu</em>)</p>
+    </header>
+
+    <main>
+        <h2>Proposition: The CCRB complaint process appeared to protect higher-ranking NYPD officers from substantiated
+            findings.</h2>
+
+        <section>
+            <h3>FOR the Proposition</h3>
+
+            <figure>
+                <img src="assets/for_rank_gap.png"
+                    alt="Bar chart showing supervisor-rank substantiation gaps below the Police Officer baseline." />
+                <figcaption>By turning rates into gaps from the Police Officer baseline, the chart makes supervisory
+                    ranks appear consistently disadvantaged in substantiated findings.</figcaption>
+            </figure>
+
+            <p>Design Decisions and Rationale:</p>
+
+            <ul>
+                <li>Transformed raw substantiation rates into a gap from the Police Officer baseline. This makes the
+                    comparison easier to read because the viewer immediately sees how much each supervisory group falls
+                    below the reference group. The tradeoff is that the baseline quietly becomes the standard of
+                    fairness, even though that standard is itself a rhetorical choice.</li>
+                <li>Grouped the highest titles into Captain+ and focused on a command-ladder sequence. This produces a
+                    clean institutional story about rank, but it also smooths over within-group variation and avoids
+                    making the Deputy Inspector exception visually prominent.</li>
+                <li>Used a red warning palette and an accusatory title. The color and text make the chart feel like
+                    evidence of a systemic problem before the reader studies the exact values. I avoided more
+                    inflammatory words like "proof" or "cover-up" because those would overstate what the dataset can
+                    support.</li>
+                <li>Did not put sample sizes in the main chart. That makes the Captain+ estimate look almost as stable
+                    as the Police Officer estimate, even though the sample sizes are very different. I settled on this
+                    because it strengthens the persuasive side, while a source note still discloses the transformation.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>AGAINST the Proposition</h3>
+
+            <figure>
+                <img src="assets/against_ci_by_rank.png"
+                    alt="Point chart with confidence intervals and sample sizes for substantiation rates by rank." />
+                <figcaption>Once all sufficiently sized ranks, denominators, and uncertainty are visible, the simple
+                    "higher rank equals more protection" ladder becomes less convincing.</figcaption>
+            </figure>
+
+            <p>Design Decisions and Rationale:</p>
+
+            <ul>
+                <li>Displayed all ranks with at least 50 allegation records and labeled their sample sizes. This
+                    directly counters the selective FOR view by making the denominator visible. The chart becomes less
+                    dramatic, but more honest about which estimates are based on very different amounts of evidence.
+                </li>
+                <li>Added 95% confidence intervals around each rank's substantiation rate. This emphasizes that
+                    high-rank estimates are noisier because there are far fewer cases. It does not erase differences
+                    across ranks, but it makes the viewer less likely to treat each bar as equally certain.</li>
+                <li>Used a zero-based vertical scale and an overall reference line. The scale reduces visual
+                    exaggeration, while the reference line gives readers a neutral benchmark. I considered a truncated
+                    scale for symmetry with the FOR view, but rejected it because this side is meant to argue through
+                    context and caution.</li>
+                <li>Chose the title "the clean rank protection ladder breaks" instead of "the system is fair." This is
+                    still persuasive language, but it avoids claiming that the complaint system works perfectly. The
+                    more limited wording fits the evidence better.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Final Reflection</h2>
+
+            <p>The easiest part of this project was producing the mechanical summaries: the dataset already includes
+                rank at the time of incident and a board disposition, so calculating substantiation rates by rank is
+                straightforward. The difficult part was deciding what each row should mean. The data contains allegation
+                records, not a perfect census of every complaint experience; a single complaint can create multiple
+                allegation rows, and ProPublica's release focuses on officers still on the force as of June 2020 who had
+                at least one substantiated allegation. Those limitations made it ethically uncomfortable to make a
+                sweeping claim like "the system is corrupt," even though some rank comparisons are rhetorically
+                powerful.</p>
+            <p>What surprised me most was how easily the same numbers could be made to feel either damning or cautious.
+                When I hid sample sizes, grouped high ranks, and used relative language, the story became:
+                higher-ranking officers are protected. When I showed all ranks, denominators, and uncertainty, the
+                story became: the evidence is too uneven to prove a simple rank-protection pattern. Neither side
+                required fabricating data. The persuasion came from baseline choice, grouping, color, labels, and what
+                context was allowed into the frame.</p>
+            <p>I now define ethical analysis and visualization as more than avoiding obvious errors. Ethical
+                visualization means making the main transformation choices legible enough that a reader can understand
+                what is being emphasized and what is being pushed aside. I think persuasive choices are acceptable when
+                they organize evidence around a clear argument while preserving enough context for a skeptical reader to
+                evaluate the claim. They become misleading when they hide context that would materially change the
+                interpretation, such as denominators, uncertainty, excluded categories, or important dataset
+                limitations. For that reason, I find the AGAINST visualization more ethically defensible, even though
+                the FOR visualization is more immediately forceful.</p>
+        </section>
+    </main>
+</body>
+
+</html>
