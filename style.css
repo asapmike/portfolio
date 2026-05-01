@@ -131,6 +131,78 @@ form button:active {
     gap: 1em;
 }
 
+.chart-layout {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-block: 2em;
+    flex-wrap: wrap;
+}
+
+#projects-pie-plot {
+    max-width: 20em;
+    flex: 0 0 min(20em, 100%);
+    overflow: visible;
+}
+
+#projects-pie-plot path {
+    cursor: pointer;
+    transition: 300ms;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+    opacity: 0.5;
+}
+
+.selected {
+    --color: #edc948 !important;
+}
+
+#projects-pie-plot path.selected {
+    fill: var(--color);
+    opacity: 1;
+}
+
+.legend {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 0.85rem 1rem;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid color-mix(in oklch, canvastext, canvas 80%);
+    border-radius: 0.85rem;
+    background: color-mix(in oklch, canvas, var(--color-accent) 8%);
+    list-style: none;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-item.selected {
+    background: color-mix(in oklch, var(--color), canvas 85%);
+    color: color-mix(in oklch, var(--color), canvastext 35%);
+    border-radius: 0.5rem;
+    padding-inline: 0.35rem;
+}
+
+.swatch {
+    width: 1em;
+    aspect-ratio: 1 / 1;
+    display: inline-block;
+    background-color: var(--color);
+    border-radius: 0.25rem;
+    flex: 0 0 auto;
+}
+
+.searchBar {
+    width: 100%;
+    margin: 0 0 1.5rem;
+}
+
 .projects article {
     display: grid;
     grid-template-rows: subgrid;
@@ -151,6 +223,17 @@ form button:active {
 
 .projects p {
     margin: 0;
+}
+
+.project-content {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.project-year {
+    font-family: Baskerville, "Times New Roman", serif;
+    font-variant-numeric: oldstyle-nums;
+    color: color-mix(in oklch, canvastext, canvas 35%);
 }
 
 .projects img {
