@@ -163,6 +163,24 @@ form button:active {
     opacity: 1;
 }
 
+circle.selected {
+    fill: #ff6b6b;
+}
+
+@keyframes marching-ants {
+    to {
+        stroke-dashoffset: -8;
+    }
+}
+
+.selection {
+    fill-opacity: 0.1;
+    stroke: canvastext;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
+}
+
 .legend {
     flex: 1;
     display: grid;
@@ -258,21 +276,76 @@ form button:active {
     outline-offset: 3px;
 }
 
+.stats,
 #profile-stats dl {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     gap: 0.25rem 0.75rem;
     margin: 0;
 }
 
+.stats dt,
 #profile-stats dt {
     grid-row: 1;
     font-weight: 650;
 }
 
+.stats dd,
 #profile-stats dd {
     grid-row: 2;
     margin: 0;
+}
+
+.gridlines line {
+    stroke-opacity: 0.45;
+}
+
+.gridlines path {
+    stroke: none;
+}
+
+dl.info {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.25rem 0.75rem;
+    margin: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+dl.info dt {
+    color: color-mix(in oklch, canvastext, canvas 35%);
+}
+
+dl.info dd {
+    margin: 0;
+    font-weight: 650;
+}
+
+.tooltip {
+    position: fixed;
+    z-index: 10;
+    padding: 0.75rem;
+    border: 1px solid color-mix(in oklch, canvastext, canvas 80%);
+    border-radius: 0.5rem;
+    background: color-mix(in oklch, canvas, transparent 8%);
+    backdrop-filter: blur(0.45rem);
+    box-shadow: 0 0.5rem 1.5rem oklch(20% 0 0 / 0.14);
+}
+
+circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+circle:hover {
+    transform: scale(1.5);
 }
 
 h1,
