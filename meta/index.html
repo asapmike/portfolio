@@ -11,11 +11,17 @@
 <body>
     <h1>Meta</h1>
     <p>This page includes stats about the code of this website.</p>
+    <p class="commit-filter">Showing commits until: <time id="commit-time"></time></p>
     <div id="stats"></div>
-    <h2>Commits by time of day</h2>
-    <div id="chart"></div>
-    <p id="selection-count">No commits selected</p>
-    <dl id="language-breakdown" class="stats"></dl>
+    <div id="scrolly-1">
+        <div id="scatter-plot">
+            <h2>Commits by time of day</h2>
+            <div id="chart"></div>
+            <p id="selection-count">No commits selected</p>
+            <dl id="language-breakdown" class="stats"></dl>
+        </div>
+        <div id="scatter-story"></div>
+    </div>
     <dl id="commit-tooltip" class="info tooltip" hidden>
         <dt>Commit</dt>
         <dd>
@@ -26,7 +32,7 @@
         <dd id="commit-date"></dd>
 
         <dt>Time</dt>
-        <dd id="commit-time"></dd>
+        <dd id="commit-tooltip-time"></dd>
 
         <dt>Author</dt>
         <dd id="commit-author"></dd>
@@ -34,6 +40,13 @@
         <dt>Lines edited</dt>
         <dd id="commit-lines"></dd>
     </dl>
+    <div id="scrolly-2">
+        <div id="files-plot">
+            <h2>Files by lines of code</h2>
+            <dl id="files"></dl>
+        </div>
+        <div id="files-story"></div>
+    </div>
 
     <script type="module" src="../global.js"></script>
     <script type="module" src="main.js"></script>

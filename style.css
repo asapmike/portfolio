@@ -296,6 +296,126 @@ circle.selected {
     margin: 0;
 }
 
+.commit-filter {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-block: 1rem;
+}
+
+.commit-filter time {
+    white-space: nowrap;
+}
+
+#files {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 0.25rem 1rem;
+    margin-block: 1rem;
+}
+
+#files > div {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.file-row {
+    will-change: transform;
+}
+
+#files dt {
+    grid-column: 1;
+}
+
+#files small {
+    display: block;
+    margin-top: 0.15rem;
+    opacity: 0.65;
+    font-size: 0.85em;
+}
+
+#files dd {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    align-content: start;
+    gap: 0.15em;
+    padding-top: 0.6em;
+    margin: 0;
+}
+
+.loc {
+    display: flex;
+    width: 0.5em;
+    aspect-ratio: 1;
+    background: var(--color);
+    border-radius: 50%;
+    transition: 200ms;
+
+    @starting-style {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+#scrolly-1,
+#scrolly-2 {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    margin-block: 2rem 6rem;
+}
+
+#scrolly-1 > *,
+#scrolly-2 > * {
+    flex: 1;
+}
+
+#scatter-story,
+#files-story {
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.35;
+}
+
+#scatter-plot,
+#files-plot {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    align-self: start;
+}
+
+#chart svg {
+    display: block;
+    width: 100%;
+    max-height: 62vh;
+}
+
+#files-plot {
+    max-height: none;
+    overflow: visible;
+}
+
+.step {
+    padding-bottom: 1.4rem;
+}
+
+#scatter-story .step:last-child {
+    padding-bottom: 90vh;
+}
+
+#files-story .step:last-child {
+    padding-bottom: 90vh;
+}
+
+.step p {
+    margin: 0;
+}
+
 .gridlines line {
     stroke-opacity: 0.45;
 }
@@ -342,6 +462,10 @@ circle {
     transition: 200ms;
     transform-origin: center;
     transform-box: fill-box;
+
+    @starting-style {
+        r: 0;
+    }
 }
 
 circle:hover {
